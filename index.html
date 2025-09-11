@@ -32,6 +32,12 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 2rem;
         }
+        .education-section {
+            background-color: #C0C9EE;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
         .services-section {
             background-color: #C0C9EE;
             border-radius: 1rem;
@@ -83,6 +89,17 @@
             top: 0;
             z-index: 50;
         }
+        .navbar-links-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+            justify-content: center; /* Centers links on smaller screens */
+            gap: 1.5rem; /* Equivalent to space-x-6, but with a gap for wrapping */
+        }
+        @media (min-width: 1024px) {
+            .navbar-links-container {
+                justify-content: flex-end; /* Aligns to the end on larger screens */
+            }
+        }
     </style>
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -91,13 +108,14 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar w-full bg-[#898AC4] text-[#FFF2E0] p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center">
             <!-- Logo/Name -->
-            <a href="#" class="text-2xl font-bold">Salma Mohamed</a>
+            <a href="#" class="text-2xl font-bold mb-4 lg:mb-0">Salma Mohamed</a>
 
             <!-- Navigation Links -->
-            <div class="flex space-x-6">
+            <div class="navbar-links-container">
                 <a href="#about" class="hover:text-[#064232] transition-colors duration-300">About Me</a>
+                <a href="#education" class="hover:text-[#064232] transition-colors duration-300">Education</a>
                 <a href="#services" class="hover:text-[#064232] transition-colors duration-300">Services</a>
                 <a href="#skills" class="hover:text-[#064232] transition-colors duration-300">Skills</a>
                 <a href="#projects" class="hover:text-[#064232] transition-colors duration-300">Projects</a>
@@ -146,6 +164,20 @@
             <p class="text-lg leading-relaxed mb-4 text-[#064232]">
                 I enjoy challenges and see data as something mysterious. What excites me most is discovering hidden links between columns and finding ways to unlock the full potential of data. My goal is to transform complex datasets into clear, actionable insights that drive smarter decisions. I work with tools like Excel, Power BI, SQL, and Python to clean, analyze, and visualize data effectively.
             </p>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <div id="education" class="container p-8 mt-12">
+        <div class="education-section">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-center text-[#064232]">Education</h2>
+            <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-start text-left">
+                <h3 class="font-bold text-xl mb-2 text-[#064232]">Senior Business Information System (BIS), Helwan University</h3>
+                <p class="text-lg text-gray-600 mb-2">Grade: Excellent</p>
+                <p class="text-sm text-gray-600">
+                    Studying Business Information Systems has provided me with a strong foundation in both technology and business principles, preparing me to solve complex problems and drive business growth.
+                </p>
+            </div>
         </div>
     </div>
 
@@ -326,7 +358,7 @@
                 </div>
                 <!-- Project Card 2: Tokyo Olympics Dashboard -->
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
-                    <img src="Screenshot 2025-08-29 200148.png" alt="Tokyo Olympics Dashboard" class="rounded-lg mb-4 w-full h-auto">
+                    <img src="Screenshot 2025-08-29 200148.jpg" alt="Tokyo Olympics Dashboard" class="rounded-lg mb-4 w-full h-auto">
                     <h3 class="font-bold text-xl mb-2 text-[#064232]">Tokyo Olympics Data Visualization</h3>
                     <p class="text-sm text-gray-600 mb-4">
                         A data visualization project presenting key statistics from the Tokyo Olympics, including medal counts and team performance.
@@ -406,6 +438,7 @@
     
 </body>
 </html>
+
 
 
 
